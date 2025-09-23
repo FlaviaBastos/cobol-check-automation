@@ -3,8 +3,6 @@
 
 # Convert username to lowercase
 LOWERCASE_USERNAME=$(echo "$ZOWE_USERNAME" | tr '[:upper:]' '[:lower:]')
-echo "Username lowercased: "
-echo $LOWERCASE_USERNAME
 
 # Check if directory exists, create if it doesn't
 if ! zowe zos-files list uss-files "/z/$LOWERCASE_USERNAME/cobolcheck" &>/dev/null; then
